@@ -1,0 +1,28 @@
+{
+  "name": "news-scraper-mongo",
+  "version": "1.0.0",
+  "description": "RCB mongo homework",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skiel14/News-Scraper-Mongo.git"
+  },
+  "author": "Sarah Kiel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skiel14/News-Scraper-Mongo/issues"
+  },
+  "homepage": "https://github.com/skiel14/News-Scraper-Mongo#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mongoose": "^5.6.2",
+    "morgan": "^1.9.1"
+  }
+}

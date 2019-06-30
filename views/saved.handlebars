@@ -1,0 +1,42 @@
+<div class="jumbotron jumbotron-fluid text-center">
+  <h1 class="display-3">Saved Articles</h1>
+  <h2>Your Saved Articles</h2>
+</div>
+<div id="main" class="container">
+  {{#if article}}
+  {{#each article}}
+  <div class="card border-primary mb-3">
+    <div class="card-header text-center">
+      <a href={{this.link}} target="_blank">
+        <h3>{{this.title}}</h3>
+      </a>
+    </div>
+    <div class="card-body text-center">
+      <p>{{this.sum}}</p>
+      <br>
+      <button type="button" class="btn btn-success addNote" data-toggle="modal" data-target="#noteModal{{this._id}}"
+        data-id={{this._id}}>Article Notes</button>
+      <button type="button" class="btn btn-danger delete" data-id={{this._id}}>Delete From Saved</button>
+    </div>
+  </div>
+  {{/each}}
+  {{else}}
+  <div class="alert alert-danger text-center">
+    <h4><strong>Oh snap!</strong> Looks like we don't have any saved articles.</h4>
+  </div>
+  <div class="card border-primary mb-3">
+    <div class="card-header text-center">
+      <h3>Would You Like To Browse Available Articles?</h3>
+    </div>
+    <div class="card-body text-center">
+      <h4>
+        <a href="/" class="scrape-new">Browse Articles</a>
+      </h4>
+    </div>
+  </div>
+  {{/if}}
+</div>
+
+{{#each article}}
+{{> notes-modal }}
+{{/each}}

@@ -1,0 +1,39 @@
+<div class="jumbotron jumbotron-fluid text-center">
+  <h1 class="display-3">Mongo Scraper</h1>
+  <h2>BuzzFeed News Edition</h2>
+</div>
+<div id="main" class="container">
+  {{#if article}}
+  {{#each article}}
+  <div class="card border-primary mb-3">
+    <div class="card-header text-center">
+      <a href={{this.link}} target="_blank">
+        <h3>{{this.title}}</h3>
+      </a>
+    </div>
+    <div class="card-body text-center">
+      <p>{{this.sum}}</p>
+      <br>
+      <button type="button" class="btn btn-success save" data-id={{this._id}}>Save Article</button>
+    </div>
+  </div>
+  {{/each}}
+  {{else}}
+  <div class="alert alert-danger text-center">
+    <h4><strong>Oh snap!</strong> Looks like we don't have any new articles.</h4>
+  </div>
+  <div class="card border-primary mb-3">
+    <div class="card-header text-center">
+      <h3>What Would You Like To Do?</h3>
+    </div>
+    <div class="card-body text-center">
+      <h4>
+        <a href="/" class="scrape-new">Try Scraping New Articles</a>
+      </h4>
+      <h4>
+        <a href="/saved">Go to Saved Articles</a>
+      </h4>
+    </div>
+  </div>
+  {{/if}}
+</div>

@@ -1,0 +1,70 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+#main {
+  margin-bottom: 96px;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.jumbotron {
+  background: url("./browser-depth-of-field-electronics-177557.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: white;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  color: white;
+  background-color: #373A3C;
+}
+
+.footer > .container > p {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  margin: 0;
+  font-weight: 800;
+  background: #212529;
+}
+
+.card .card-header {
+  background-color: #D9230F;
+  color: white;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.note {
+  border: solid #D9230F 1px;
+  border-radius: 0.25em;
+  padding: 10px auto;
+  margin: 5px auto;
+}
